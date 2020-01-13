@@ -1,4 +1,7 @@
 # bm125de.github.io
 歡迎來到首頁，選擇前往的分支。
 
-[學習範本](/LearningCode/)
+##範例
+[JavaScript](/LearningCode/)
+
+##作品
