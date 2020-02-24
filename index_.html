@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CheihYu Lin</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,200,300,400,500,600,700,800,900');
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            margin: 0;
+            padding: 0 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* width: 100vw; */
+            flex-flow: column;
+            /* min-width: 1024px; */
+        }
+
+        header {
+            display: none;
+            font-size: 100px;
+            color: white;
+            font-weight: 700;
+            margin: 40px 0;
+        }
+
+        .header {
+            margin: 50px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background-image: url('header.jpg');
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        nav {
+            height: 20%;
+            margin: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            width: 40%;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            transition: .25s;
+            color: black;
+            text-decoration: none;
+            padding-right: 20px;
+            margin: 0 6%;
+        }
+
+        nav .material-icons-sharp {
+            font-size: 50px !important;
+            transition: .25s;
+        }
+        .header {
+            height: 100%;
+        }
+        nav a h3 {
+            text-transform: uppercase;
+            width: 100%;
+            height: 20px;
+            font-size: 15px;
+            letter-spacing: 5px;
+            margin-top: 5px;
+            margin-left: -20px;
+            transition: .25s;
+            opacity: .0;
+            text-align: center;
+        }
+
+        /* .title {
+            font-size: 40px;
+        }
+        main {
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+        }
+        main a {
+            color: black;
+            text-decoration: none;
+            border-bottom: 4px solid black;
+        } */
+        @media screen and (max-width: 1024px) {
+            body {
+                height: 100vh;
+            }
+            nav {
+                height: 100%;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+            nav h3 {
+                color: transparent;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <header>BLOG</header>
+    </div>
+    <nav>
+        <a href="https://git.bm125.de/block-beta/" class="nav-a">
+            <i class="material-icons-sharp">library_books</i>
+            <h3>BLOCK<br>(beta)</h3>
+        </a>
+        <a href="#" class="nav-a">
+            <i class="material-icons-sharp">art_track</i>
+            <h3>ART</h3>
+        </a>
+        <a href="#" class="nav-a" onclick="openblogfun();">
+            <i class="material-icons-sharp">videocam_off</i>
+            <h3>not safe for work</h3>
+        </a>
+        <a href="#" onclick="history.back();" class="nav-a">
+            <i class="material-icons-sharp">exit_to_app</i>
+            <h3>EXIT</h3>
+        </a>
+    </nav>
+</body>
+<script>
+    async function openblogfun() {
+        openblog = true;
+        blog();
+    }
+    var openblog = false
+    function blog () {
+        if(openblog == true) {
+            console.log(239765728587)
+            $(".blog").css('display','block')
+        }else {
+            $(".blog").css('display','none')
+        }
+    }
+    blog();
+    $(".nav-a").mouseover(
+        function (e) {
+            const dom = e.currentTarget;
+            $(dom).find("h3").css('margin-left', '0');
+            $(dom).find("i").css('opacity', '.5');
+            // $(dom).css('padding-right','0');
+            $(dom).find("h3").css('opacity', '1');
+        }
+    ).mouseout(
+        function (e) {
+            const dom = e.currentTarget;
+            $(dom).find("h3").css('opacity', '.0');
+            $(dom).find("i").css('opacity', '1');
+            // $(dom).css('padding-right','20px');
+            $(dom).find("h3").css('margin-left', '-20px');
+        }
+    )
+</script>
+
+</html>

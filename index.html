@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BM5³ | 歡迎來到首頁，請先選取文案。</title>
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900|Noto+Sans+TC:100,300,400,500,700,900|Noto+Serif+JP:100,300,400,500,700,900|Noto+Serif+TC:100,300,400,500,700,900&display=swap&subset=chinese-traditional');
+
+        /* font-family: 'Noto Sans TC', sans-serif;
+        font-family: 'Noto Serif TC', serif;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-family: 'Noto Serif JP', serif; */
+
+        body {
+            font-family: 'Noto Serif TC', serif;
+            margin: 0;
+            padding-top: 4vh;
+            padding-left: 4vw;
+            background-color: rgb(255, 255, 255);
+        }
+
+        a {
+            text-decoration: transparent;
+        }
+
+        h3.name {
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 5px;
+            font-family: 'Noto Sans CT', sans-serif;
+            text-transform: uppercase;
+            color: black;
+            text-decoration: transparent;
+            font-weight: 900;
+        }
+
+        h1.title {
+            font-weight: 900;
+            font-size: 60px;
+            margin: 20px 0;
+            letter-spacing: 10px;
+        }
+
+        div.line {
+            background-color: black;
+            border: black 2px solid;
+            width: 80px;
+            margin: 20px 5px;
+        }
+
+        div.project {
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 600px;
+            /* background-color: blue; */
+            text-align: left;
+        }
+
+        div.project div.item {
+            text-transform: uppercase;
+            margin: 4px 0;
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        div.project div.item>div {
+            display: flex;
+        }
+
+        div.project div.item div.name::after,
+        div.project div.item div.date::after {
+            text-align: center;
+            width: 20px;
+            content: '/';
+            margin-right: 10px;
+            margin-left: auto;
+            border-bottom: transparent !important;
+        }
+
+        div.project div.item .name {
+            width: 40%;
+        }
+
+        div.project div.item .date {
+            width: 30%;
+        }
+
+        div.project div.item .status {
+            width: 30%;
+        }
+
+        div.project div.item a {
+            text-decoration: transparent;
+            border-bottom: black solid 2px;
+            color: black;
+            transition: ease-in-out .15s;
+        }
+
+        div.project div.item a>* {
+            border-bottom: black solid 2px;
+        }
+
+        div.project div.item a:hover {
+            opacity: .5;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 2%;
+            right: 10px;
+            padding: 5px 0;
+            border-radius: 200px;
+            text-align: center;
+            /* background-color: rgba(0, 0, 0, 0.205); */
+            width: 250px;
+        }
+
+        footer p {
+            margin: 0;
+            display: block;
+            width: 100;
+        }
+
+        .later {
+            color: gray;
+        }
+
+        /* .filter {
+            z-index: -1;
+            opacity: .3;
+            position: fixed;
+            top: 0;
+            left: 0;
+            opacity: .2;
+            background-image: url('https://lh5.googleusercontent.com/proxy/lYtaYOnH04yOQ7rcRQHsgtFc-WXn8F8tJHAA18GQrw_9zzpXGN0KJKvRhHSxYXkMsp1vlcGZ9jK566RJuWky93IP2d5Sa9Eg');
+            filter: blur(2px);
+            background-size: 30%;
+            height: 100%;
+            width: 100%;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- <div class="filter"></div> -->
+    <a href="https://bm125.de">
+        <h3 class="name">bm125.de</h3>
+    </a>
+    <h1 class="title">選取文案</h1>
+    <div class="line"></div>
+
+    <div class="project">
+        <div class="item">
+            <div class="name">
+                名稱
+                <i class="material-icons">
+                    arrow_drop_down
+                </i>
+            </div>
+            <div class="date">
+                建立日期
+                <i class="material-icons">
+                    arrow_drop_up
+                </i>
+            </div>
+            <div class="status">
+                狀態
+                <i class="material-icons">
+                    arrow_drop_down
+                </i>
+            </div>
+        </div>
+        <!-- 項目 -->
+        <div class="item">
+            <div class="name">
+                <a href="index_.html" onclick="alert('舊版的網頁連結已不支援！');">新版首頁</a>
+            </div>
+            <div class="date">
+                <a href="">20.02.08</a>
+            </div>
+            <div class="status later">已停止</div>
+        </div>
+        <!-- 項目 -->
+        <div class="item">
+            <div class="name">
+                <a href="javascript:clicknsfw()"><span>獸人索爾</span>的部落格</a>
+            </div>
+            <div class="date">
+                <a href="">20.02.08</a>
+            </div>
+            <div class="status">啟用</div>
+        </div>
+        <!-- 項目 -->
+        <div class="item">
+            <div class="name">
+                <a href="https://git.bm125.de/block-beta" onclick="alert('如果你正處於離線狀態，則無法正常連線至網頁！');">網頁生成套件</a>
+            </div>
+            <div class="date">
+                <a href="">20.01.22</a>
+            </div>
+            <div class="status">啟用</div>
+        </div>
+    </div>
+
+    <footer>
+        <p>索爾獸人 © Copyright 2020</p>
+    </footer>
+</body>
+
+<script>
+    ; var encode_version = 'sojson.v5', xcans = '__0x6d5f8', __0x6d5f8 = ['LcOWwoDCrsODCTk6wqY=', 'PUnDk8OyOhXDnHZc', 'OcOUwoHCucOR', '5Luj6IOF5YqO6Zqsw7LCnC7DngADwrvChcOE', 'Jw4HVMObMFAQfg==', 'wpo7csOzwq3CvA==', 'wrnCoi/Dv0vDmmzCrDQIwqgl', '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', 'w5bColp/wpdBwo0Fw7M=']; (function (_0x20d709, _0x4cc093) { var _0x29d1c1 = function (_0x26271c) { while (--_0x26271c) { _0x20d709['push'](_0x20d709['shift']()); } }; _0x29d1c1(++_0x4cc093); }(__0x6d5f8, 0x136)); var _0x220c = function (_0x1d07f7, _0x20f812) { _0x1d07f7 = _0x1d07f7 - 0x0; var _0x3f9227 = __0x6d5f8[_0x1d07f7]; if (_0x220c['initialized'] === undefined) { (function () { var _0x9ed1aa = typeof window !== 'undefined' ? window : typeof process === 'object' && typeof require === 'function' && typeof global === 'object' ? global : this; var _0x1c09e1 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='; _0x9ed1aa['atob'] || (_0x9ed1aa['atob'] = function (_0x17da9a) { var _0x77a6f0 = String(_0x17da9a)['replace'](/=+$/, ''); for (var _0x1cf326 = 0x0, _0x54af06, _0x270bdf, _0x379fa7 = 0x0, _0x110382 = ''; _0x270bdf = _0x77a6f0['charAt'](_0x379fa7++); ~_0x270bdf && (_0x54af06 = _0x1cf326 % 0x4 ? _0x54af06 * 0x40 + _0x270bdf : _0x270bdf, _0x1cf326++ % 0x4) ? _0x110382 += String['fromCharCode'](0xff & _0x54af06 >> (-0x2 * _0x1cf326 & 0x6)) : 0x0) { _0x270bdf = _0x1c09e1['indexOf'](_0x270bdf); } return _0x110382; }); }()); var _0x287246 = function (_0x2bc38f, _0x37d8cd) { var _0xb3e21b = [], _0x2b2966 = 0x0, _0x23792d, _0x275037 = '', _0x54aa5f = ''; _0x2bc38f = atob(_0x2bc38f); for (var _0x4f799f = 0x0, _0x44cd18 = _0x2bc38f['length']; _0x4f799f < _0x44cd18; _0x4f799f++) { _0x54aa5f += '%' + ('00' + _0x2bc38f['charCodeAt'](_0x4f799f)['toString'](0x10))['slice'](-0x2); } _0x2bc38f = decodeURIComponent(_0x54aa5f); for (var _0x5aec15 = 0x0; _0x5aec15 < 0x100; _0x5aec15++) { _0xb3e21b[_0x5aec15] = _0x5aec15; } for (_0x5aec15 = 0x0; _0x5aec15 < 0x100; _0x5aec15++) { _0x2b2966 = (_0x2b2966 + _0xb3e21b[_0x5aec15] + _0x37d8cd['charCodeAt'](_0x5aec15 % _0x37d8cd['length'])) % 0x100; _0x23792d = _0xb3e21b[_0x5aec15]; _0xb3e21b[_0x5aec15] = _0xb3e21b[_0x2b2966]; _0xb3e21b[_0x2b2966] = _0x23792d; } _0x5aec15 = 0x0; _0x2b2966 = 0x0; for (var _0x254123 = 0x0; _0x254123 < _0x2bc38f['length']; _0x254123++) { _0x5aec15 = (_0x5aec15 + 0x1) % 0x100; _0x2b2966 = (_0x2b2966 + _0xb3e21b[_0x5aec15]) % 0x100; _0x23792d = _0xb3e21b[_0x5aec15]; _0xb3e21b[_0x5aec15] = _0xb3e21b[_0x2b2966]; _0xb3e21b[_0x2b2966] = _0x23792d; _0x275037 += String['fromCharCode'](_0x2bc38f['charCodeAt'](_0x254123) ^ _0xb3e21b[(_0xb3e21b[_0x5aec15] + _0xb3e21b[_0x2b2966]) % 0x100]); } return _0x275037; }; _0x220c['rc4'] = _0x287246; _0x220c['data'] = {}; _0x220c['initialized'] = !![]; } var _0x827ca0 = _0x220c['data'][_0x1d07f7]; if (_0x827ca0 === undefined) { if (_0x220c['once'] === undefined) { _0x220c['once'] = !![]; } _0x3f9227 = _0x220c['rc4'](_0x3f9227, _0x20f812); _0x220c['data'][_0x1d07f7] = _0x3f9227; } else { _0x3f9227 = _0x827ca0; } return _0x3f9227; };[_0x220c('0x0', '^FGf')][_0x220c('0x1', ')A3^')]['constructor']((['sojson.v4'] + [])['constructor'][_0x220c('0x2', 'qzv5')]['apply'](null, _0x220c('0x3', 'PMh)')['split'](/[a-zA-Z]{1,}/)))(_0x220c('0x4', 'IUib'));; if (!(typeof encode_version !== _0x220c('0x5', '@ZhF') && encode_version === _0x220c('0x6', 'Bzjf'))) { window[_0x220c('0x7', '@ZhF')](_0x220c('0x8', 'tkBQ')); }; encode_version = 'sojson.v5';
+    // 20202020636F6E736F6C652E6C6F67282225634F6052305E955728505A4EC09EBCFF01FF01FF01205C6E5C6E25634F6077E590536FEB65397A0B5F0F78BC662F90556CD57684884C70BA55CEFF1F5C6E5C6E7D6662116EFE56DE53BB4F604ED65ABD76847528623657FA672C4ECB9762FF01222C2022636F6C6F723A207265643B20666F6E742D73697A653A383070783B206261636B67726F756E642D636F6C6F723A234646463B20666F6E742D66616D696C793A20274E6F746F2053616E73205443272C2073616E732D73657269663B666F6E742D7765696768743A203930303B222C22636F6C6F723A20626C75653B20666F6E742D73697A653A333070783B206261636B67726F756E642D636F6C6F723A234646463B666F6E742D66616D696C793A20274E6F746F2053616E73205443272C2073616E732D73657269663B666F6E742D7765696768743A203930303B22293B0D0A
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('worker.js');
+    }
+
+    // link to a image file
+    var iconUrl = 'https://www.seeklogo.net/wp-content/uploads/2014/10/Google-Chrome-logo-vector-download.png';
+
+    // create the <img> html element
+    // on first load it will request the image
+    // second time it will load it from cache directly thanks to the service worker
+    var imgElement = document.createElement('img');
+    imgElement.src = iconUrl;
+
+
+    // nsfw
+    //20202020202020202F2F20766172206E736677636B65636B203D2070726F6D707428228ACB8F3851655BC678BC524D5F808A729801976222290D0A20202020202020202F2F20696620286E736677636B65636B203D3D206E756C6C207C7C206E736677636B65636B203D3D20222229207B0D0A20202020202020202F2F207D20656C736520696620286E736677636B65636B203D3D20227D22723E73784EBA771F76845F889999FF012229207B0D0A20202020202020202F2F2020202020646F63756D656E742E6C6F636174696F6E2E68726566203D202268747470733A2F2F74686F72637366772E626C6F6773706F742E636F6D2F223B0D0A20202020202020202F2F207D20656C7365207B0D0A20202020202020202F2F2020202020616C65727428225BC678BC932F8AA4FF0122293B0D0A20202020202020202F2F2020202020636C69636B6E73667728293B0D0A20202020202020202F2F207D
+</script>
+
+</html>
